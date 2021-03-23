@@ -1,28 +1,15 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const CharacterImageStyled = styled.div `
-    
-    grid-area: avatar;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (max-width: 1024px) {
-        
-    }
-    
+const CharacterImageStyled = styled.img`
+  max-width: 100%;
+  border-radius: 50%;
 `
 
-function CharacterImage({image, name}) {
-
-    return (
-        <div>
-            <CharacterImageStyled>
-                <img class="character-image" src={image} alt={name}></img>
-            </CharacterImageStyled>       
-        </div>
-    )
+function CharacterImage({ image, name }) {
+  return (
+    <CharacterImageStyled src={image} alt={name} />
+  )
 }
 
-export default  CharacterImage;
+export default CharacterImage
